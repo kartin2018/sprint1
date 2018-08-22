@@ -17,9 +17,13 @@
 	<div class="alert alert-danger fade in">${Invalid}</div>
 	<table class="table table-bordered">
 		<tr><td>Email</td>
-			<td><input type="email" name="email" required></td></tr>
+			<td><input type="email" name="email" required placeholder='Enter your email address'></td></tr>
 		<tr><th colspan="2"><input type="submit" value="Validate"></th></tr>
 	</table>
+</form>
+<form action="process.jsp" method="post">
+<input type="text" name="otpvalue" required placeholder="Enter the OTP"/>
+<input type="submit" value="Verify OTP"/>
 </form>
 </div>
 </body>

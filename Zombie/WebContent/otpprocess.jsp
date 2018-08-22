@@ -21,7 +21,7 @@ try {
 	Random random= new Random();
 	int number=random.nextInt(900000)+100000;
 	System.out.println(number);
-	String apikey = "apikey="+"J/3tSFgo948-P0Rz1PoY12DaMegAjtyERCrjYp4BsT";
+	String apikey = "apikey="+"7arWl720YWU-t2cUH4nsWMrtwQI1TVVVM6XOVEyHKo";
 	String message="&message="+"OTP for verification is "+number;
 	String sender="&sender="+"TXTLCL";
 	String numbers="&numbers="+session.getAttribute("mno");
@@ -38,7 +38,7 @@ try {
 	while((line=rd.readLine())!=null) {
 		sb.append(line);
 	}rd.close(); 
-	response.sendRedirect("otp.jsp");	
+	response.sendRedirect("forget.jsp");	
 }catch(Exception e) {
 	e.printStackTrace();
 		}

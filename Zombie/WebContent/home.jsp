@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="banner.jsp" />
+<jsp:include page="banner.jsp" /> 
 <div class="container" style="margin-top:50px">
 <hr>
 <form action="login.do">

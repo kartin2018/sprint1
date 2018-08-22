@@ -28,5 +28,5 @@ alert("OTP DOES NOT MATCH!!");
 </script>
 
 <%
-response.sendRedirect("otp.jsp");
+response.sendRedirect("home.jsp");
 } %>

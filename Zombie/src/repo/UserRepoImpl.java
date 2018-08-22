@@ -8,12 +8,14 @@ import org.springframework.stereotype.Repository;
 
 import bean.ForgetBean;
 import bean.LoginBean;
+import entity.Cart;
 import entity.User;
 
 @Repository
 public class UserRepoImpl implements UserRepo {
 	@Autowired
 	private SessionFactory factory;
+	static int count=11;
 	
 	@Override
 	public User authenticate(LoginBean login) {
@@ -60,9 +62,17 @@ public class UserRepoImpl implements UserRepo {
 	public boolean persist(User user) {
 		Session session = factory.openSession();
 		Transaction txn = session.beginTransaction();
+		
 		try {
+			Cart cart=new Cart();
+			cart.setCartId("C0"+Integer.toString(count++));
+			user.setCart(cart);
+			cart.setUser(user);
 			session.save(user);
+			session.save(cart);
 			txn.commit();
+			System.out.println("Cart and user saved");
+			
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();

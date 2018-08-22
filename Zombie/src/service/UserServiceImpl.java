@@ -44,6 +44,8 @@ public class UserServiceImpl implements UserService {
 		// Password encoding
 		Encoder encoder = Base64.getEncoder();
 		user.setPassword(encoder.encodeToString(user.getPassword().getBytes()));
+		//user.setCart(cart);
+		
 		return repo.persist(user);
 	}
 }

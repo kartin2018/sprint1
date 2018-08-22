@@ -13,8 +13,9 @@
 <body>
 <jsp:include page="banner.jsp" />
 <div class="container" style="margin-top:50px">
-<h1>User Registration</h1><hr size="3" color="crimson">
-<form action="register.do"  onSubmit="return formValidation();" >
+<h1>User Registration</h1><hr size="3" color="crimson" >
+<form action="register.do" onSubmit="return formValidation();"  >
+<!--onSubmit="return formValidation();"  -->
 	<div class="alert alert-danger fade in">${Invalid}</div>
 	<table class="table table-bordered">
 	<tr><td>Name</td>
@@ -22,7 +23,7 @@
 	<tr><td>Mobile Number</td>
 			<td><input type="number" name="contact" id="contact"></td></tr>
 	<tr><td>Email</td>
-			<td><input type="email" name="email" id="email" ></td></tr>
+			<td><input type="email" name="email" id="email" required ></td></tr>
 		<tr><td>Password</td>
 			<td><input type="password" name="password" id="password"></td></tr>
 	<tr><td>Address</td>
@@ -32,7 +33,7 @@
 							for(String ct: cities){%>
 							<option value = "<%=ct%>"><%=ct %></option>
 							<% } %>
-							</select>					
+							</select>				
 							<br></tr> 
 	<!-- 	<tr><th colspan="2"><input type="button" value="Save"></th></tr> -->
 		<tr><th colspan="2"><input type="submit" value="Register"></th></tr>

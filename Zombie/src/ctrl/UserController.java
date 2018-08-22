@@ -23,7 +23,7 @@ public class UserController {
 		User user = service.authenticate(login);
 		if(user != null) {
 			session.setAttribute("User", user);
-			return "home";
+			return "productdummy";
 		} else {
 			model.put("Prompt", "User Id/Password is incorrect");
 			return "home";
@@ -35,6 +35,7 @@ public class UserController {
 		if(service.validate(forget)) {
 			session.setAttribute("Id", forget.getEmail());
 			session.setAttribute("mno", forget.getContact());
+			System.out.println(forget.getContact());
 			return "otpprocess";
 		} else {
 			model.put("Invalid", "User Id & Email does not match");

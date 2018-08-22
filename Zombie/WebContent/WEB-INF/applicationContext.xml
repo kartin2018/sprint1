@@ -24,6 +24,9 @@
 		<property name="annotatedClasses">
 			<list>
 				<value>entity.User</value>
+				<value>entity.Cart</value>
+				<value>entity.Product</value>
+				<value>entity.Orders</value>
 			</list>
 		</property>
 	</bean>
